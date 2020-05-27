@@ -6,6 +6,8 @@
     
     <title>Document</title>
     <link rel="Stylesheet" href="styletemplate.css">
+    <link rel="Stylesheet" href="footerStyle.css">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -18,36 +20,39 @@
 
 <body>
   
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="d-flex flex-grow-1">
-            <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
-            <a class="navbar-brand" href="#">
-                Navbar 7
-            </a>
-            <div class="w-100 text-right">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark col-sm-12">
+        <a class="navbar-brand" href="#">
+            <img class="logoJB" src="./images/logo.jpg" alt="Logo JB-Prod.">
+        </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ml-auto flex-nowrap">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Qui suis-je ?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Galerie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Livre d'or</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contacte" href="#">Contacte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Espace client</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
-            <ul class="navbar-nav ml-auto flex-nowrap">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#"class="nav-link">Qui suis-je ?</a></li>
-                <li class="nav-item">
-                    <li><a href="#"class="nav-link">Galerie</a></li>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Link</a>
-                </li>
-            </ul>
-        </div>
     </nav>
 
     <div class="page">
+
       <div class="col-sm-2 social">
         <div class="social-button">
           <button type="button" class="btn btn-primary px-3"onclick="Social()"><i class="fas fa-globe"></i></button>
@@ -84,94 +89,58 @@
 
       </div>
 
-
-</div>
-
-
-
-<!-- Footer -->
-<div class="footer font-small blue pt-4">
-
-    <!-- Footer Links -->
-    <div class=" text-center text-md-left">
-  
-      <!-- Grid row -->
-      <div class="row">
-  
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
-  
-          <!-- Content -->
-          <h5 class="text-uppercase">Footer Content</h5>
-          <p>Here you can use rows and columns to organize your footer content.</p>
-  
-        </div>
-        <!-- Grid column -->
-  
-        <hr class="clearfix w-100 d-md-none pb-3">
-  
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-  
-          <!-- Links -->
-          <h5 class="text-uppercase">Links</h5>
-  
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-  
-        </div>
-        <!-- Grid column -->
-  
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-  
-          <!-- Links -->
-          <h5 class="text-uppercase">Links</h5>
-  
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-  
-        </div>
-        <!-- Grid column -->
-  
-      </div>
-      <!-- Grid row -->
-  
+        <hr id="separateur">
     </div>
-    <!-- Footer Links -->
-  
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  
-  </div>
-  <!-- Footer -->
+
+
+
+<section class="col-sm-12" id="footer">
+                    <div class="container">
+                        <div class="row text-center text-xs-center text-sm-left text-md-left">
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                
+                                <ul class="list-unstyled quick-links">
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                
+                                <ul class="list-unstyled quick-links">
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                
+                                <ul class="list-unstyled quick-links">
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+                                    <li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+
+                                <p class="h6">© All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
+                            </div>
+                            <hr>
+                        </div>  
+                    </div>
+                </section>
+                <!-- ./Footer -->
 
 
 </body>
