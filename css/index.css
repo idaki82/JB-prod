@@ -1,0 +1,35 @@
+#acceuil
+	{
+		color : white;
+		background-color : black;
+	}
+#logo_acceuil
+	{
+		background-color : white;
+		width : 200px;
+		height : 200px;
+		border-width : 3px;
+		border-color : gray;
+		margin: auto;
+	}
+header
+	{
+		text-align : center;
+	}
+section
+	{
+		display : flex;
+		justify-content : center;
+		align-items : center;
+	}
+em
+	{
+		color : black;
+		margin : auto;
+		text-align : center;
+	}
+footer
+	{
+		background-color : white;
+		opacity : 50%;
+	}
