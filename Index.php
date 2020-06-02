@@ -1,19 +1,28 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/index.css">
-		<title>JB-prod.fr</title>
-	</head>
-	<body id="acceuil">
-		<header>
-			<H1>Bienvenue !</H1>
-		</header>
-		<section>
-			<div id="logo_acceuil"></div>
-		</section>
-		<footer>
-			<div><em>En construction<em></div>
-		</footer>
-	</body>
-</html>
+<?php
+
+declare(strict_types=1); 
+
+
+require_once 'controller/menuController.php';
+
+//require_once 'model/mainBasique.php';
+
+// là on crée un nouveau controller puis on l'active 
+$controller = new MenuController();
+
+try 
+	{
+		$controller->runChoix(); //ici j'appelle la fonction choix de mon nouveau controller
+	}
+
+catch (Exception $e) 
+	{
+		die($e->getMessage()); //arrêt du programme en cas d'echec du lancement du controller et message d'erreur
+	}
+
+finally 
+	{
+		exit(); //cloture de l'index
+	}
+
+?>

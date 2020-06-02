@@ -29,24 +29,27 @@
 /*--------------------------------------------------------------- réglages pages ---------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------------------------*/ 
 
-.page{
-    height: 100%;
-    background-color: black;
-    color: white;
-    margin-top: 6vh;
-}
+.page
+    {
+        height: 100%;
+        background-color: black;
+        color: white;
+        margin-top: 6vh;
+        min-height: 67vh;
+    }
 
-.content{
-    margin-left: auto;
-    margin-right: auto
-}
+.content
+    {
+        margin-left: auto;
+        margin-right: auto
+    }
 
 #separateur
     {
         height: 2px;
         width: 100%;       
         background-color: white;
-        margin: 0px;
+        margin: 20px;
     }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------*/ 
@@ -61,58 +64,66 @@
     }
 
 .social-button
-{
-    position: fixed;
-    top : 33%;
-}
-.fa-project-diagram{
-    text-align: center;
-    padding: 16px;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 20px;
-    background: #3B5998;
-}
-.icon-bar {
-    display: none;
-    position: fixed;
-    top : 50%;
-    -webkit-transform : translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    {
+        position: fixed;
+        top : 33%;
+    }
+.fa-project-diagram
+    {
+        text-align: center;
+        padding: 16px;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 20px;
+        background: #3B5998;
+    }
+.icon-bar 
+    {
+        display: none;
+        position: fixed;
+        top : 50%;
+        -webkit-transform : translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
     }
 
 /* Style the icon bar links */
-.icon-bar a {
-    display: block;
-    text-align: center;
-    padding: 16px;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 20px;
-}
+.icon-bar a 
+    {
+        display: block;
+        text-align: center;
+        padding: 16px;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 20px;
+    }
 
 /* Style the social media icons with color, if you want */
-.icon-bar a:hover {
-    background-color: #000;
-}
+.icon-bar a:hover 
+    {
+        background-color: #000;
+    }
 
-.facebook {
-    background: #3B5998;
-    color: white;
-}
+.facebook 
+    {
+        background: #3B5998;
+        color: white;
+    }
 
-.twitter {
-    background: #55ACEE;
-    color: white;
-}
+.twitter 
+    {
+        background: #55ACEE;
+        color: white;
+    }
 
-.linkedin {
-    background: #007bb5;
-    color: white;
-}
-.instagram {
-    
-    background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-    color: white;
-}
+.linkedin 
+    {
+        background: #007bb5;
+        color: white;
+    }
+
+.instagram 
+    {  
+        background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+        color: white;
+    }
