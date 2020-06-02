@@ -1,19 +1,15 @@
 <?php
 
+
     class livredor
     {
         public function getLivredor($PDO)
         {
-            
             $sql = $PDO -> prepare('SELECT * FROM livre_dor');
             $resultIsOk = $sql->execute();
             $result = $sql-> fetchAll();
             return ($result);
            
-          /* while($data = $result -> fetch(PDO::FETCH_OBJ))
-           {
-            echo $data->message_lv;
-           }*/
         }
 
         public function ajoutLivredor($PDO, $nomcrea, $message, $date, $ip, $idclient)
@@ -54,17 +50,28 @@
         
         function suppLivredor($PDO,$idMsgLv)
 		{
-            //vérification que les variables sont bien remplies
-            var_dump($idMsgLv);
+            $result = -1;
 
-            //on lie chaque marqueur à une valeur
-			$rqt->bindValue(':idMsgLv', $idMsgLv, PDO::PARAM_STR);
-            
+            /*
+            $result = 1 => succes
+            $result = 0 => echec 
+            */
+       
 			//préparation de la requète d'insertion (SQL)
-            $sql = $PDO->prepare('DELETE FROM `livre_dor` WHERE `livre_dor`.`id_lv` = :idMsgLv');
+            $sql = $PDO->prepare('DELETE FROM `livre_dor` WHERE `livre_dor`.`id_lv` = ?');
 
             //éxécution de la requête
-            $insertIsOk = $sql->execute();
+            $suppIsOk = $sql->execute(array($idMsgLv));
+
+            if ($suppIsOk == true){
+                $result = 1;
+            }else if ($suppIsOk == false){
+                $result = 0;
+            } else {
+                $result = $idMsgLv;
+            }
+
+            return $result;
 		}
     }
 
